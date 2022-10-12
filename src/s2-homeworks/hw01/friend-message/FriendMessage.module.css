@@ -15,17 +15,24 @@
 }
 
 .friendText {
+    position: relative;
     text-align: start;
-    width: 585px;
+    min-width: 400px;
     height: 60px;
     background: #F5F7FB;
     box-shadow: 0px 5px 20px rgba(29, 33, 38, 0.03), 0px 1px 2px rgba(29, 33, 38, 0.1);
     border-radius: 10px 10px 10px 0;
-    padding: 7px 13px 8px 25px;
+    padding: 7px 13px 8px 13px;
+    margin-left: 13px;
 }
 
-.friendText:after {
-
+.friendText::after {
+    content: ''; 
+    position: absolute;
+    left: 0px; bottom: 0px; /* Положение треугольника */
+    border: 13px solid transparent; /* Прозрачные границы */
+    border-bottom: 10px solid #F5F7FB; /* Добавляем треугольник */
+    transform: translateX(-50%);   
 }
 
 .friendName {
