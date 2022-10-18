@@ -25,10 +25,8 @@
 }
 
 .wrapper {
-    position: absolute;
-    top: 107px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0 auto;
+    margin-top: 107px;
     width: 1280px;
 }
 

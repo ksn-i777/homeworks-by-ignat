@@ -1,5 +1,7 @@
 .message {
-
+    display: grid;
+    grid-template-rows: 1fr 12px;
+    justify-content: flex-end;
 }
 
 .imageAndText {
@@ -54,7 +56,6 @@
 }
 
 .time {
-    position: absolute;
     width: 26px;
     height: 12px;
     font-style: normal;
@@ -62,9 +63,9 @@
     font-size: 10px;
     line-height: 12px;
     color: #000000;
-    right: 94px;
-    transform: translateX(50%);
     margin-top: 5px;
+    justify-self: end;
+    transform: translateX(-40%);
 }
 
 

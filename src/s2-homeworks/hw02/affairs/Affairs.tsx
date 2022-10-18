@@ -4,31 +4,36 @@ import {AffairType, FilterType} from '../HW2'
 import s from './Affairs.module.css'
 
 type AffairsPropsType = {
-    data: any // need to fix any
-    setFilter: any
-    deleteAffairCallback: any
+    data: Array<AffairType> //+ need to fix any
+    setFilter: (value: string) => void
+    deleteAffairCallback: (_id: number) => void
     filter: FilterType
 }
-
+// компонента
 function Affairs(props: AffairsPropsType) {
+    // функция, меняющая фильтр на all
     const setAll = () => {
-        // need to fix
+        props.setFilter('all') //+ need to fix
     }
+    // функция, меняющая фильтр на high
     const setHigh = () => {
-        // need to fix
+        props.setFilter('high') //+ need to fix
     }
+    // функция, меняющая фильтр на middle
     const setMiddle = () => {
-        // need to fix
+        props.setFilter('middle') //+ need to fix
     }
+    // функция, меняющая фильтр на low
     const setLow = () => {
-        // need to fix
+        props.setFilter('low') //+ need to fix
     }
-
+    // все классы кнопок присваиваются переменным
     const cnAll = s.button + ' ' + s.all + (props.filter === 'all' ? ' ' + s.active : '')
     const cnHigh = s.button + ' ' + s.high + (props.filter === 'high' ? ' ' + s.active : '')
     const cnMiddle = s.button + ' ' + s.middle + (props.filter === 'middle' ? ' ' + s.active : '')
     const cnLow = s.button + ' ' + s.low + (props.filter === 'low' ? ' ' + s.active : '')
 
+    // создается массив компонент affair с атрибутами, который отрисуется в конце
     const mappedAffairs = props.data.map((a: AffairType) => (
         <Affair
             key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
@@ -69,6 +74,7 @@ function Affairs(props: AffairsPropsType) {
                     Low
                 </button>
             </div>
+            {/* массив компонент affair с атрибутами */}
             <div className={s.affairs}>{mappedAffairs}</div>
         </div>
     )
