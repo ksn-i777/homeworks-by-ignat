@@ -11,9 +11,9 @@ import s2 from '../../s1-main/App.module.css'
 * 6+    / дописать тип и логику функции deleteAffairCallback
 * 7+    / в файле Affairs.tsx дописать типизацию пропсов
 * 8+    / в файле Affairs.tsx дописать логику функций setAll, setHigh, setMiddle, setLow
-* 9 / в файле Affair.tsx дописать типизацию пропсов
-* 10 / в файле Affair.tsx дописать функции deleteCallback и использовать
-* 11 / в файле Affair.tsx отобразить приходящие данные
+* 9+    / в файле Affair.tsx дописать типизацию пропсов
+* 10+   / в файле Affair.tsx дописать функции deleteCallback и использовать
+* 11+   / в файле Affair.tsx отобразить приходящие данные
 * */
 
 //+ types
@@ -32,16 +32,16 @@ export type FilterType = 'all' | AffairPriorityType
 // исходные данные - массив объектов
 const defaultAffairs: Array<AffairType> = [ //+ need to fix any
     {_id: 1, name: 'React', priority: 'high'}, // студенты могут изменить содержимое name и количество элементов в массиве, ...priority не менять!
-    {_id: 2, name: 'anime', priority: 'low'},
-    {_id: 3, name: 'games', priority: 'low'},
-    {_id: 4, name: 'work', priority: 'high'},
-    {_id: 5, name: 'html & css', priority: 'middle'},
+    {_id: 2, name: 'Anime', priority: 'low'},
+    {_id: 3, name: 'HTML & CSS', priority: 'middle'},
+    {_id: 4, name: 'Games', priority: 'low'},
+    {_id: 5, name: 'Work', priority: 'high'},
 ]
 
 //+ pure helper functions
 // функция, фильтрующая массив объектов по фильтру
 export const filterAffairs = (affairs: Array<AffairType>, filter: AffairPriorityType): Array<AffairType> => { //+ need to fix any
-    let filteredAffairsByPriority: Array<AffairType> = defaultAffairs
+    let filteredAffairsByPriority: Array<AffairType> = affairs
     if (filter === 'low') {
         filteredAffairsByPriority = affairs.filter(el => el.priority === 'low')
     }
@@ -55,9 +55,9 @@ export const filterAffairs = (affairs: Array<AffairType>, filter: AffairPriority
 }
 // функция, удаляющая из массива объект по ид и возвращающая новый массив без него
 export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<AffairType> => { //+ need to fix any
-    let affairsAfterDeleteAffair = affairs.filter(el => el._id !== _id)
-    return affairsAfterDeleteAffair //+ need to fix
+    return affairs.filter(el => el._id !== _id)//+ need to fix
 }
+
 // сама компонента
 function HW2() {
     //стэйт массива объектов
@@ -68,14 +68,13 @@ function HW2() {
     const filteredAffairs = filterAffairs(affairs, filter)    
     // функция, меняющая массив объектов после удаления объекта по ид
     const deleteAffairCallback = (_id: number) => { //+ need to fix any
-        debugger
         setAffairs(deleteAffair(affairs, _id))//+ need to fix
     }
 
     return (
-        <div id={'hw2'}>
-            <div className={s2.hwTitle}>Homework #2</div>
-            <div className={s2.hw}>
+        <div id={'hw2'} className={`${s2.wrapper} ${s2.w2}`}>
+            <div className={s2.hwTitle}>Homework № 2</div>
+            <div className={s2.hw2}>
                 {/* компонента */}
                 <Affairs
                     /* отфильтрованный по фильтру массив */

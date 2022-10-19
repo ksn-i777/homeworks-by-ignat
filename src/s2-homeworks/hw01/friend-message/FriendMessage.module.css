@@ -19,27 +19,27 @@
 .friendText {
     position: relative;
     text-align: start;
-    min-width: 400px;
-    height: 60px;
+    max-width: 500px;
+    min-height: 60px;
     background: #F5F7FB;
     box-shadow: 0px 5px 20px rgba(29, 33, 38, 0.03), 0px 1px 2px rgba(29, 33, 38, 0.1);
     border-radius: 10px 10px 10px 0;
-    padding: 7px 13px 8px 13px;
+    padding: 7px 13px 8px 15px;
     margin-left: 13px;
 }
 
 .friendText::after {
     content: ''; 
     position: absolute;
-    left: 0px; bottom: 0px; /* Положение треугольника */
+    left: 0; bottom: 0; /* Положение треугольника */
     border: 13px solid transparent; /* Прозрачные границы */
     border-bottom: 10px solid #F5F7FB; /* Добавляем треугольник */
     transform: translateX(-50%);   
 }
 
 .friendName {
-    min-width: 35px;
-    height: 20px;
+    min-width: 40px;
+    height: 22px;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -48,7 +48,7 @@
 }
 
 .friendMessageText {
-    height: 20px;
+    word-wrap: break-word;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -67,8 +67,6 @@
     line-height: 12px;
     color: #000000;
     margin-top: 5px;
-    justify-self: flex-start;    
-    margin-top: 5px;
+    justify-self: flex-start;
     transform: translateX(40%);
-
 }

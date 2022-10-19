@@ -52,9 +52,9 @@ export const friendMessage0: MessageType = {
 
 const HW1 = () => {
     return (
-        <div id={'hw1'} className={s2.wrapper}>
-            <div className={s2.hwTitle}>Homework #1</div>
-            <div className={s2.hw}>
+        <div id={'hw1'} className={`${s2.wrapper} ${s2.w1}`}>
+            <div className={s2.hwTitle}>Homework № 1</div>
+            <div className={s2.hw1}>
                 {/*проверка отображения (не менять)*/}
                 <div className={s2.dialog}>
                     <Message message={message0} />
