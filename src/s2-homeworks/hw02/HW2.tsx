@@ -72,7 +72,7 @@ function HW2() {
     }
 
     return (
-        <div id={'hw2'} className={`${s2.wrapper} ${s2.w2}`}>
+        <div id={'hw2'} className={s2.wrapper}>
             <div className={s2.hwTitle}>Homework № 2</div>
             <div className={s2.hw2}>
                 {/* компонента */}
