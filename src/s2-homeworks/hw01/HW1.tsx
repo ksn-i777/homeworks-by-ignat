@@ -54,9 +54,9 @@ const HW1 = () => {
     return (
         <div id={'hw1'} className={s2.wrapper}>
             <div className={s2.hwTitle}>Homework № 1</div>
-            <div className={s2.hw1}>
+            <div className={s2.hw}>
                 {/*проверка отображения (не менять)*/}
-                <div className={s2.dialog}>
+                <div>
                     <Message message={message0} />
                     <FriendMessage message={friendMessage0} />
                 </div>
