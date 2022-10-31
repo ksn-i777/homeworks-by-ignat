@@ -25,6 +25,7 @@
     border-radius: 3px;
     border: 2px solid #06c;
     cursor: pointer;
+    outline: none;
 }
 
 .checkbox:checked {
@@ -41,4 +42,9 @@
 .spanClassName {
     font-family: 'Montserrat', sans-serif;
     color: #06c;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
 }

@@ -42,36 +42,13 @@ const Stand = () => {
 
             <div className={s.buttons}>
                 {/*обычная кнопка:*/}
-                <div>
-                    <SuperButton id={'hw4-super-button-default'}>
-                        default
-                    </SuperButton>
-                </div>
+                <div><SuperButton id={'hw4-super-button-default'}>Дефолтная</SuperButton></div>
                 {/*красная кнопка:*/}
-                <div>
-                    <SuperButton id={'hw4-super-button-red'} xType={'red'}>
-                        red
-                    </SuperButton>
-                </div>
+                <div><SuperButton id={'hw4-super-button-red'} xType={'red'}>Опасность</SuperButton></div>
                 {/*задизэйбленная кнопка:*/}
-                <div>
-                    <SuperButton
-                        id={'hw4-super-button-disabled'}
-                        xType={'red'}
-                        disabled
-                    >
-                        disabled
-                    </SuperButton>
-                </div>
-                {/*задизэйбленная кнопка:*/}
-                <div>
-                    <SuperButton
-                        id={'hw4-super-button-secondary'}
-                        xType={'secondary'}
-                    >
-                        secondary
-                    </SuperButton>
-                </div>
+                <div><SuperButton id={'hw4-super-button-disabled'} xType={'disabled'} disabled>Не активна</SuperButton></div>
+                {/*дополнительная кнопка:*/}
+                <div><SuperButton id={'hw4-super-button-secondary'} xType={'secondary'}>Дополнительная</SuperButton></div>
             </div>
 
             <div className={s.checkboxes}>
@@ -81,8 +58,7 @@ const Stand = () => {
                         id={'hw4-super-checkbox-with-text'}
                         checked={stateForAllCheckboxes}
                         onChangeChecked={setChecked}
-                    >
-                        some text
+                    >Hometask
                     </SuperCheckbox>
                 </div>
                 {/*совместим со старым кодом:*/}
