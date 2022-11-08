@@ -1,7 +1,36 @@
 .buttonsContainer {
     margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 25px;
+}
+.saveButton {
+    width: 115px;
+    height: 30px;
+    padding: 5px 24px;
+    background: #0066CC;
+    border-radius: 3px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+.getButton {
+    width: 130px;
+    height: 30px;
+    padding: 5px 24px;
+    border: 1px solid #0066CC;
+    border-radius: 3px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #0066CC;
 }
 
 .editableSpanContainer {
-    margin-top: 25px;
+    margin-top: 30px;
 }
