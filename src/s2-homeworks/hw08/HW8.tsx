@@ -6,9 +6,9 @@ import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import User from './User'
 
 /*
-* 1 - дописать типы и логику (сортировка по имени, фильтрация по совершеннолетию) homeWorkReducer, проверить тестом
-* 2 - дописать компоненту User
-* 3 - сделать стили в соответствии с дизайном
+* 1+ - дописать типы и логику (сортировка по имени, фильтрация по совершеннолетию) homeWorkReducer, проверить тестом
+* 2+ - дописать компоненту User
+* 3+ - сделать стили в соответствии с дизайном
 * */
 
 export type UserType = {
@@ -54,8 +54,8 @@ const HW8 = () => {
     }
 
     return (
-        <div id={'hw3'}>
-            <div className={s2.hwTitle}>Homework #8</div>
+        <div id={'hw3'} className={s2.wrapper}>
+            <div className={s2.hwTitle}>Homework №8</div>
             <div className={s2.hw}>
                 <div className={s.container}>
                     <div className={s.buttonsContainer}>
@@ -84,10 +84,10 @@ const HW8 = () => {
 
                     <table id={'hw8-users'} className={s.users}>
                         <thead className={s.thead}>
-                        <tr>
-                            <td className={s.nameCol}>Name</td>
-                            <td className={s.ageCol}>Age</td>
-                        </tr>
+                            <tr>
+                                <td className={s.nameCol}>Name</td>
+                                <td className={s.ageCol}>Age</td>
+                            </tr>
                         </thead>
 
                         <tbody>{finalPeople}</tbody>
