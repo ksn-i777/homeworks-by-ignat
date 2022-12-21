@@ -18,6 +18,29 @@ html {
     color: var(--color);
 }
 
-.select {
+.label {
+    display: block;
+    margin-top: 35px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
 
+.select {
+    margin: 5px 0 0;
+    width: 171px;
+    height: 36px;
+    border: 1px solid #323232;
+    border-radius: 2px;
+    padding: 5px;
+    background-color: transparent;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    text-transform: capitalize;
 }
