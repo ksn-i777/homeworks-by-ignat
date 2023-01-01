@@ -1,7 +1,16 @@
 .buttonsContainer {
+    margin-top: 35px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 25px;
 }
 
 .responseContainer {
+    margin-top: 30px;
+    margin-left: 90px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 95px;
 }
 
 .imageContainer {
@@ -11,12 +20,33 @@
 }
 
 .textContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .code {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    color: #000000;
 }
 
 .text {
+    margin-top: 12px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
 }
+
 .info {
+    margin-top: 12px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
 }

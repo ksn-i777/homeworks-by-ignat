@@ -9,9 +9,9 @@ import error500 from './images/500.svg'
 import errorUnknown from './images/error.svg'
 
 /*
-* 1 - дописать функцию send
-* 2 - дизэйблить кнопки пока идёт запрос
-* 3 - сделать стили в соответствии с дизайном
+* 1+ - дописать функцию send
+* 2+ - дизэйблить кнопки пока идёт запрос
+* 3+ - сделать стили в соответствии с дизайном
 * */
 
 const HW13 = () => {
@@ -36,18 +36,36 @@ const HW13 = () => {
             .then((res) => {
                 setCode('Код 200!')
                 setImage(success200)
-                // дописать
-
+                //+ дописать
+                setText('...всё ок) код 200 - обычно означает что скорее всего всё ок)')
+                setInfo('')
             })
             .catch((e) => {
-                // дописать
-
+                //+ дописать
+                if(e.response.status === 400) {
+                    setCode('Ошибка 400!')
+                    setImage(error400)
+                    setText('Ты не отправил success в body вообще! ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
+                    setInfo('')
+                }
+                if(e.response.status === 500) {
+                    setCode('Ошибка 500!')
+                    setImage(error500)
+                    setText('эмитация ошибки на сервере ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)')
+                    setInfo('')
+                }
+                if(e.response.status === 0) {
+                    setCode('Error!')
+                    setImage(errorUnknown)
+                    setText('Network Error AxiosError')
+                    setInfo('')
+                }
             })
     }
 
     return (
-        <div id={'hw13'}>
-            <div className={s2.hwTitle}>Homework #13</div>
+        <div id={'hw13'} className={s2.wrapper}>
+            <div className={s2.hwTitle}>Homework №13</div>
 
             <div className={s2.hw}>
                 <div className={s.buttonsContainer}>
@@ -55,8 +73,8 @@ const HW13 = () => {
                         id={'hw13-send-true'}
                         onClick={send(true)}
                         xType={'secondary'}
-                        // дописать
-
+                        //+ дописать
+                        disabled={!!info}
                     >
                         Send true
                     </SuperButton>
@@ -64,8 +82,8 @@ const HW13 = () => {
                         id={'hw13-send-false'}
                         onClick={send(false)}
                         xType={'secondary'}
-                        // дописать
-
+                        //+ дописать
+                        disabled={!!info}
                     >
                         Send false
                     </SuperButton>
@@ -73,8 +91,8 @@ const HW13 = () => {
                         id={'hw13-send-undefined'}
                         onClick={send(undefined)}
                         xType={'secondary'}
-                        // дописать
-
+                        //+ дописать
+                        disabled={!!info}
                     >
                         Send undefined
                     </SuperButton>
@@ -82,8 +100,8 @@ const HW13 = () => {
                         id={'hw13-send-null'}
                         onClick={send(null)} // имитация запроса на не корректный адрес
                         xType={'secondary'}
-                        // дописать
-
+                        //+ дописать
+                        disabled={!!info}
                     >
                         Send null
                     </SuperButton>
