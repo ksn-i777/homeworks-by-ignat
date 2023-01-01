@@ -43,7 +43,8 @@
 }
 
 .info {
-    margin-top: 12px;
+    display: inline-block;
+    width: 450px;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
